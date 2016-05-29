@@ -37,7 +37,7 @@ namespace DavamixWeb
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseMvc();
+			app.UseMvc();
         }
     }
 }

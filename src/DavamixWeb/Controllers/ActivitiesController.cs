@@ -7,17 +7,23 @@ using Microsoft.AspNetCore.Mvc;
 namespace DavamixWeb.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class ActivitiesController : Controller
     {
-        // GET api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+		// GET api/values
+		//[HttpGet]
+		//public IActionResult Get()
+		//{
+		//	return "value";
+		//}
 
-        // GET api/values/5
-        [HttpGet("{id}")]
+		//Return custom view (Values/Index)
+	    public IActionResult Index()
+	    {
+		    return View();
+	    }
+
+	    // GET api/values/5
+		[HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
